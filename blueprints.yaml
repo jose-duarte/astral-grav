@@ -1,0 +1,27 @@
+name: Astral
+version: 0.1.0
+description: Astral HTML5UP Port
+icon: rebel
+author:
+  name: Jose Duarte
+  email: jduarte@whenpeoplehadcomputers.com
+homepage: https://github.com/jose-duarte/grav-theme-astral
+demo: http://demo.yoursite.com
+keywords: grav, theme, etc
+bugs: https://github.com/jose-duarte/grav-theme-astral/issues
+readme: https://github.com/jose-duarte/grav-theme-astral/blob/develop/README.md
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in Menu
+        highlight: 1
+        default: 1
+        options:
+          1: PLUGIN_ADMIN.ENABLED
+          0: PLUGIN_ADMIN.DISABLED
+        validate:
+          type: bool

@@ -1,4 +1,7 @@
-# astral-grav
-Astral Theme for Grav CMS
+# Astral Theme
 
-First project to adapt the html5up theme Astral to Grav
+The **Astral** Theme is for [Grav CMS](http://github.com/getgrav/grav).  This README.md file should be modified to describe the features, installation, configuration, and general usage of this theme.
+
+## Description
+
+Astral HTML5UP Port
