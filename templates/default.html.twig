@@ -9,19 +9,19 @@
 <html>
 
   <head>
-
-    <title>{{ site_title }}</title>
+  {% block head %}
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
 
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-    <meta name="description" content="{{ pages.index.meta.description }}">
+    <meta name="description" content="{{ pages.header.description }}">
     {% if pages.index.meta.robots %}<meta name="robots" content="{{ pages.index.meta.robots }}">{% endif %}
-    <!--[if lte IE 8]><script src="{{ theme_url }}/assets/js/ie/html5shiv.js"></script><![endif]-->
+    <!--[if lte IE 8]><script src="{{ url('theme://assets/js/ie/html5shiv.js') }}"></script><![endif]-->
 
-    <link rel="stylesheet" href="{{ theme_url }}/assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="{{ theme_url }}/assets/css/noscript.css" /></noscript>
-    <!--[if lte IE 8]><link rel="stylesheet" href="{{ theme_url }}/assets/css/ie8.css" /><![endif]-->
+    <link rel="stylesheet" href="{{ url('theme://assets/css/main.css') }}" />
+    <noscript><link rel="stylesheet" href="{{ url('theme://assets/css/noscript.css') }}" /></noscript>
+    <!--[if lte IE 8]><link rel="stylesheet" href="{{ url('theme://assets/css/ie8.css') }}" /><![endif]-->
 
     {# User CSS & Fonts #}
     {% if pages.index.meta.css %}
@@ -39,7 +39,7 @@
     <meta property="og:url" content="{{ base_url }}">
     <meta property="og:type" content="website">
     {% if pages.index.meta.og_image %}<meta property="og:image" content="{{ base_url }}/{{ pages.index.meta.og_image }}">{% endif %}
-
+  {% endblock head%}
   </head>
 
   <body>
